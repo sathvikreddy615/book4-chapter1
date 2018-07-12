@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Kennel from "./kennel.js";
+import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(<Kennel />, document.querySelector("#root"));
+import registerServiceWorker from "./registerServiceWorker";
+import KennelCompany from "./KennelCompany";
+import css from "./index.css";
+
+ReactDOM.render((
+<Router>
+    <KennelCompany />
+</Router>
+), document.querySelector("#root"));
+
+registerServiceWorker()

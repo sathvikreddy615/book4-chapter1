@@ -1,13 +1,27 @@
 import React, { Component } from "react";
+import Location from "./location";
 
 export default class LocationList extends Component {
+    state = {
+        locations: [
+            { id: 1, name: "Nashville North" },
+            { id: 2, name: "Nashville South" }
+        ]
+    }
+
     render() {
         return (
             <React.Fragment>
-                <h3>Student Kennels</h3>
-                <h4>Nashville North Location</h4>
-                <h5>500 Puppy Way</h5>
+                <div className="locationList">
+                    {
+                        this.state.locations.map(location => {
+                            return <Location locations={location} />
+                        })
+                    }
+                </div>
             </React.Fragment>
         );
     }
 }
+
+// exports to ApplicationViews.js
