@@ -3,10 +3,13 @@ import Location from "./location";
 
 export default class LocationList extends Component {
     state = {
-        locations: [
-            { id: 1, name: "Nashville North" },
-            { id: 2, name: "Nashville South" }
-        ]
+        locations: []
+    }
+
+    componentDidMount () {
+        fetch("http://localhost:5002/locations")
+        .then(e => e.json())
+        .then(locations => this.setState({ locations: locations }))
     }
 
     render() {
@@ -15,7 +18,7 @@ export default class LocationList extends Component {
                 <div className="locationList">
                     {
                         this.state.locations.map(location => {
-                            return <Location locations={location} />
+                            return <Location key={location.id} location={location}>{location.name}</Location>
                         })
                     }
                 </div>

@@ -4,27 +4,23 @@ import Animal from "./animal";
 
 export default class AnimalList extends Component {
     state = {
-        animals: [
-            { id: 1, name: "Lion" },
-            { id: 2, name: "Wolf" },
-            { id: 3, name: "Elephant" },
-            { id: 4, name: "Otter" },
-            { id: 5, name: "Kangaroo" },
-            { id: 6, name: "Anaconda" }
-        ]
+        animals: []
+    }
+
+    componentDidMount () {
+        fetch("http://localhost:5002/animals")
+        .then(e => e.json())
+        .then(animals => this.setState({ animals: animals }))
     }
 
     render() {
         return (
             <React.Fragment>
-                <ul className="animalInfo">
                     {
-                        this.state.animals.map(animal => {
-                            return <Animal animals={animal} />
-                        })
-
+                        this.state.animals.map(animal =>
+                            <Animal key={animal.id} animal={animal}>{animal.name}</Animal>
+                        )
                     }
-                </ul>
             </React.Fragment>
         )
     }
