@@ -1,32 +1,54 @@
 {
-    "locations": [
-        { "id": 1, "name": "Nashville North", "zipcode": 37212 },
-        { "id": 2, "name": "Nashville South", "zipcode": 37067 }
-    ],
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "German Shepherd" },
-        { "id": 2, "name": "Jack", "breed": "Cocker Spaniel" },
-        { "id": 3, "name": "Angus", "breed": "Dalmatian" },
-        { "id": 4, "name": "Henley", "breed": "Carolina Retriever" },
-        { "id": 5, "name": "Derkins", "breed": "Pug" },
-        { "id": 6, "name": "Checkers", "breed": "Bulldog" }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Jessica Younker"
-        },
-        {
-            "id": 2,
-            "name": "Jordan Nelson"
-        },
-        {
-            "id": 3,
-            "name": "Zoe LeBlanc"
-        },
-        {
-            "id": 4,
-            "name": "Blaise Roberts"
-        }
-    ]
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "zipcode": 37212
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "zipcode": 37067
+    }
+  ],
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "German Shepherd"
+    },
+    {
+      "id": 4,
+      "name": "Henley",
+      "breed": "Carolina Retriever"
+    },
+    {
+      "id": 6,
+      "name": "Checkers",
+      "breed": "Bulldog"
+    },
+    {
+      "name": "Gary",
+      "breed": "Golden Retriever",
+      "id": 7
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jessica Younker"
+    },
+    {
+      "id": 2,
+      "name": "Jordan Nelson"
+    },
+    {
+      "id": 3,
+      "name": "Zoe LeBlanc"
+    },
+    {
+      "id": 4,
+      "name": "Blaise Roberts"
+    }
+  ]
 }
